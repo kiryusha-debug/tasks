@@ -3,17 +3,21 @@
 using namespace std;
 int main()
 {
+	setlocale(LC_ALL, "rus");
 	double p,a;
 	double S;
-	cin >> p; // вводим периметр
+
+	cin >> p; // entering the perimeter
+	if (cin.fail())
+		cout << "Mistake: You didn't enter a number" << endl;
+	else if (p <= 0)
+		cout << "Error: the entered number is not positive" << endl;
+	system("pause");
 	a = p / 3;
-	S = a * a * sqrt(3.0) / 4.0; // вычисляю площадь по формуле - sqrt (3.0) - квадратный корень из 3
-	cout << S << endl; // ввожу полученное значение
+
+	S = a * a * sqrt(3.0) / 4.0; // I calculate the area using the formula - sqrt (3.0) - the square root of 3
+	cout << S << endl; 
 	system("pause");
 
 	return 0;
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
