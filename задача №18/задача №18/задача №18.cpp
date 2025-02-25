@@ -14,11 +14,12 @@ int main()
     cout << "y = dx+k - the second equation. Enter the coefficients d, k" << endl;
     cout << "d = "; cin >> d; cout << "k = "; cin >> k;
     x1 = (-(b - d) + sqrt(pow((b - d), 2) - 4 * a * (c - k))) / (2 * a);
-    x2 = (-(b - d) - sqrt(pow((b - d), 2) - 4 * a * (c - k))) / (2 * a);
+    x2 = (-(b - d) - sqrt(pow((b - d), 2) - 4 * a * (c - k))) / (2 * a);         //calculations
     y1 = d * x1 + k;
     y2 = d * x2 + k;
     if (x1 == x2) cout << "The point of intersection of two given lines: [" << x1 << ", " << y1 << "]" << endl;
     else
-        cout << "These lines have two points of intersection.:" << endl << "[" << x1 << ", " << y1 << "] и "
+        cout << "These lines have two points of intersection: " << endl << "[" << x1 << ", " << y1 << "] и "
         << "[" << x2 << ", " << y2 << "]" << endl;
+    return 0;
 }

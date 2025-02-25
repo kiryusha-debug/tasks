@@ -1,20 +1,24 @@
 ﻿#include <iostream>
-#include <math.h>
+#include <cmath> 
 
 using namespace std;
 
-int main()
-{ 
-    setlocale(LC_ALL, "rus");
-    int a, b, c, S;
-    cout << "Введите первый катет: ";
-    cin >> a;
-    cout << "Введите второй катет: ";
-    cin >> b;
-    c = sqrt(a * a + b * b);
-    S = a * b / 2;
-    cout << "Гипотенуза равна: " << c << ", Площадь равна: " << S;
-}
+int main() {
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
+    setlocale(LC_ALL, "rus");
+
+    double a, c, b, area;
+
+    cout << "Введите длину катета: ";
+    cin >> a;
+    cout << "Введите длину гипотенузы: ";
+    cin >> c;
+
+    b = sqrt(c * c - a * a);  //We calculate the length of the second leg using the Pythagorean theorem
+
+    area = 0.5 * a * b;  //Calculating the area of the triangle
+
+    cout << "Площадь треугольника: " << area << endl;
+
+    return 0;
+}

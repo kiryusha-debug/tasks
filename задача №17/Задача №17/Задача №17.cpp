@@ -8,7 +8,7 @@ using namespace std;
 
      float xA, yA, xC, yC, xD, yD, xB, yB, dy, dx, d;
 
-     cout << "Введите координаты вершин квадрата А и С\n";
+     cout << "Enter the coordinates of the vertices of the square А и С\n";
      cin >> xA >> yA >> xC >> yC;
 
 
@@ -16,7 +16,7 @@ using namespace std;
      dx = xC - xA;
      d = (dx - dy) / 2;
 
-     xD = xA + d;
+     xD = xA + d;                      //calculations
      yD = yC - d;
 
      xB = xC - d;
